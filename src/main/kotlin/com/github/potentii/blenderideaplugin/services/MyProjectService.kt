@@ -1,7 +1,7 @@
-package org.jetbrains.plugins.template.services
+package com.github.potentii.blenderideaplugin.services
 
+import com.github.potentii.blenderideaplugin.MyBundle
 import com.intellij.openapi.project.Project
-import org.jetbrains.plugins.template.MyBundle
 
 class MyProjectService(project: Project) {
 
