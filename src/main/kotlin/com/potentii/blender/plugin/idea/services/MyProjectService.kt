@@ -1,7 +1,7 @@
-package com.github.potentii.blenderideaplugin.services
+package com.potentii.blender.plugin.idea.services
 
-import com.github.potentii.blenderideaplugin.MyBundle
 import com.intellij.openapi.project.Project
+import com.potentii.blender.plugin.idea.MyBundle
 
 class MyProjectService(project: Project) {
 

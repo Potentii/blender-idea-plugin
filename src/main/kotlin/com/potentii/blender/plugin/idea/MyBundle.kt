@@ -1,4 +1,4 @@
-package com.github.potentii.blenderideaplugin
+package com.potentii.blender.plugin.idea
 
 import com.intellij.AbstractBundle
 import org.jetbrains.annotations.NonNls

@@ -1,6 +1,6 @@
-package com.github.potentii.blenderideaplugin.listeners
+package com.potentii.blender.plugin.idea.listeners
 
-import com.github.potentii.blenderideaplugin.services.MyProjectService
+import com.potentii.blender.plugin.idea.services.MyProjectService
 import com.intellij.openapi.components.service
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.project.ProjectManagerListener

@@ -1,19 +1,29 @@
 <idea-plugin>
-    <id>com.github.potentii.blenderideaplugin</id>
-    <name>blender-idea-plugin</name>
-    <vendor>potentii</vendor>
+    <id>com.potentii.blender.plugin.idea</id>
+    <name>Blender Integration</name>
+    <version>1.0.0</version>
+    <vendor email="potentii@gmail.com">Guilherme Reginaldo Ruella</vendor>
+    <description>Blender integration for Jetbrains IDEs</description>
 
     <!-- Product and plugin compatibility requirements -->
     <!-- https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
     <depends>com.intellij.modules.platform</depends>
+    <depends>PythonCore</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.potentii.blenderideaplugin.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.potentii.blenderideaplugin.services.MyProjectService"/>
+        <projectConfigurable 
+            parentId="tools" 
+            instance="com.potentii.blender.plugin.idea.settings.project.BlenderProjectSettings" 
+            id="com.potentii.blender.plugin.idea.settings.project.BlenderProjectSettings" 
+            displayName="Blender Settings" 
+            nonDefaultProject="true"/>
+        
+        <applicationService serviceImplementation="com.potentii.blender.plugin.idea.services.MyApplicationService"/>
+        <projectService serviceImplementation="com.potentii.blender.plugin.idea.services.MyProjectService"/>
     </extensions>
 
     <applicationListeners>
-        <listener class="com.github.potentii.blenderideaplugin.listeners.MyProjectManagerListener"
+        <listener class="com.potentii.blender.plugin.idea.listeners.MyProjectManagerListener"
                   topic="com.intellij.openapi.project.ProjectManagerListener"/>
     </applicationListeners>
 </idea-plugin>
